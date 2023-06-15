@@ -11,12 +11,20 @@
     "start": "next start",
     "lint": "next lint",
     "test:tsc": "tsc -p . --noEmit",
-    "lint:staged": "lint-staged"
+    "lint:staged": "lint-staged",
+    "prepare": "husky install"
   },
   "lint-staged": {
     "*.{ts,tsx}": [
       "eslint --fix"
     ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "sh ./.husky/pre-commit",
+      "pre-push": "sh ./.husky/pre-push",
+      "commit-msg": "sh ./.husky/commit-msg"
+    }
   },
   "dependencies": {
     "@headlessui/react": "^1.7.15",
