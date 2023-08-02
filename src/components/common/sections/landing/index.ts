@@ -1,0 +1,6 @@
+export { ServicesSection } from './services'
+export { WorkingSection } from './working'
+export { TeamsSection } from './teams'
+export { CaseStudies } from './cases'
+export { CTASection } from './cta'
+export { Hero } from './hero'
