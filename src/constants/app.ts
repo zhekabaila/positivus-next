@@ -178,3 +178,42 @@ export const teams: TeamsType[] = [
     link: 'https://www.linkedin.com/in/zheka-baila-arkan-624517267/'
   }
 ]
+
+interface TestimonialsType {
+  review: string
+  name: string
+  profession: string
+}
+
+export const testimonials: TestimonialsType[] = [
+  {
+    review:
+      'We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence.',
+    name: 'John Smith',
+    profession: 'Marketing Director at XYZ Corp'
+  },
+  {
+    review:
+      'We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence.',
+    name: 'John Smith',
+    profession: 'Marketing Director at XYZ Corp'
+  },
+  {
+    review:
+      'We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence.',
+    name: 'John Smith',
+    profession: 'Marketing Director at XYZ Corp'
+  },
+  {
+    review:
+      'We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence.',
+    name: 'John Smith',
+    profession: 'Marketing Director at XYZ Corp'
+  },
+  {
+    review:
+      'We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence.',
+    name: 'John Smith',
+    profession: 'Marketing Director at XYZ Corp'
+  }
+]

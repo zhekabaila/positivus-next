@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+
 import { FaLinkedinIn } from 'react-icons/fa'
 
 interface TeamCardProps {
@@ -22,7 +23,7 @@ const TeamCard = ({ name, profession, description, img, link }: TeamCardProps) =
           <h1 className="text-xl font-medium text-black">{name}</h1>
           <p className="text-lg font-normal text-black">{profession}</p>
         </div>
-        <Link href={link} className="absolute top-0 right-0 p-2 bg-black rounded-full aspect-square">
+        <Link href={link} target="_blank" className="absolute top-0 right-0 p-2 bg-black rounded-full aspect-square">
           <FaLinkedinIn color="#B9FF66" size={16} />
         </Link>
       </div>

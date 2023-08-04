@@ -15,7 +15,7 @@ const spaceGrotesk = Space_Grotesk({
 })
 
 export const metadata: Metadata = {
-  title: 'Positivus',
+  title: 'Positivus | Landing Page',
   description: 'Positivus'
 }
 
