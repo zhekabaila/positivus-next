@@ -1,8 +1,14 @@
 import React from 'react'
 
-const Title = ({ color = 'black' }: { color?: string }) => {
+const Title = ({ color = 'black', width = 172, height = 29 }: { color?: string; width?: number; height?: number }) => {
   return (
-    <svg width="172" height="29" viewBox="0 0 172 29" fill="currentColor" color={color} xmlns="http://www.w3.org/2000/svg">
+    <svg
+      width={width}
+      height={height}
+      viewBox="0 0 172 29"
+      fill="currentColor"
+      color={color}
+      xmlns="http://www.w3.org/2000/svg">
       <g id="Positivus">
         <path
           d="M0.919922 28V0H12.0399C13.7466 0 15.2666 0.346667 16.5999 1.04C17.9599 1.70667 19.0133 2.66667 19.7599 3.92C20.5333 5.14667 20.9199 6.62667 20.9199 8.36V8.88C20.9199 10.6133 20.5199 12.1067 19.7199 13.36C18.9466 14.6133 17.8933 15.5733 16.5599 16.24C15.2266 16.9067 13.7199 17.24 12.0399 17.24H5.23992V28H0.919922ZM5.23992 13.32H11.5999C13.1199 13.32 14.3333 12.92 15.2399 12.12C16.1466 11.32 16.5999 10.2267 16.5999 8.84V8.44C16.5999 7.02667 16.1466 5.92 15.2399 5.12C14.3333 4.32 13.1199 3.92 11.5999 3.92H5.23992V13.32Z"

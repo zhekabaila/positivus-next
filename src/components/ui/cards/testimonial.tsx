@@ -9,8 +9,8 @@ interface IProps {
 const TestimonialCard = ({ review, name, profession }: IProps) => {
   return (
     <div className="space-y-10">
-      <div className="relative bg-dark border-2 border-primary py-12 px-13 max-w-xl rounded-11.5">
-        <p className="text-white text-lg font-normal">&quot; {review} &quot;</p>
+      <div className="relative bg-dark border-2 border-primary py-7.5 lg:py-12 px-7.5 lg:px-13 max-w-xl rounded-11.5">
+        <p className="text-white text-base lg:text-lg font-normal">&quot; {review} &quot;</p>
         <div className="absolute left-13 -bottom-6.8">
           <div className="relative">
             <div className="h-0 w-0 border-r-27.5 border-t-27.5 border-l-27.5 border-solid border-r-transparent border-l-transparent border-b-transparent border-t-primary"></div>
@@ -20,7 +20,7 @@ const TestimonialCard = ({ review, name, profession }: IProps) => {
       </div>
       <div className="pl-19">
         <h4 className="text-primary text-lg font-normal capitalize">{name}</h4>
-        <p className="text-white text-lg font-normal">{profession}</p>
+        <p className="text-white text-base lg:text-lg font-normal">{profession}</p>
       </div>
     </div>
   )

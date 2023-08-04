@@ -11,6 +11,7 @@ import 'swiper/css'
 import TestimonialCard from '@/components/ui/cards/testimonial'
 import Container from '@/components/layout/container'
 import { testimonials } from '@/constants/app'
+import HeaderSection from '@/components/ui/headerSection'
 
 export const TestimonialsSection = () => {
   const breakpoints = {
@@ -29,32 +30,27 @@ export const TestimonialsSection = () => {
   }
 
   return (
-    <Container className="my-21.5">
-      <div className="flex gap-x-10">
-        <h2 className="text-black text-40px font-medium leading-normal bg-primary px-2 rounded-lg">Testimonials</h2>
-        <p className="text-black font-normal text-lg w-125">
-          Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about Our Digital Marketing Services
-        </p>
-      </div>
-      <div className="mt-21.5">
-        <div className=" bg-dark rounded-11.5 pt-21 pb-17">
-          <Swiper
-            grabCursor={true}
-            breakpoints={breakpoints}
-            centeredSlides={true}
-            pagination={{ el: '.swiper-pagination', clickable: true }}
-            modules={[Pagination]}
-            className="swiper_container mt-18">
-            {testimonials.map((item, index) => (
-              <SwiperSlide key={index}>
-                <TestimonialCard {...item} />
-              </SwiperSlide>
-            ))}
-            <div className="slider-controler pt-18">
-              <div className="swiper-pagination"></div>
-            </div>
-          </Swiper>
-        </div>
+    <Container className="mt-15 lg:mt-21.5 space-y-10 lg:space-y-21.5">
+      <HeaderSection
+        title="Testimonials"
+        description="Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about Our Digital Marketing Services"
+      />
+      <div className=" bg-dark rounded-11.5 pt-7.5 lg:pt-21 pb-15 lg:pb-17 px-7.5 lg:px-0">
+        <Swiper
+          grabCursor={true}
+          breakpoints={breakpoints}
+          centeredSlides={true}
+          pagination={{ el: '.swiper-pagination', clickable: true }}
+          modules={[Pagination]}>
+          {testimonials.map((item, index) => (
+            <SwiperSlide key={index}>
+              <TestimonialCard {...item} />
+            </SwiperSlide>
+          ))}
+          <div className="slider-controler pt-15 lg:pt-18">
+            <div className="swiper-pagination"></div>
+          </div>
+        </Swiper>
       </div>
     </Container>
   )
