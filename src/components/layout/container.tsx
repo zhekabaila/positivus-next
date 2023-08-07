@@ -8,7 +8,7 @@ interface ContainerProps {
 }
 
 const Container = ({ children, className }: ContainerProps) => {
-  return <section className={cn('px-5 lg:px-25', className)}>{children}</section>
+  return <div className={cn('px-5 lg:px-25', className)}>{children}</div>
 }
 
 export default Container

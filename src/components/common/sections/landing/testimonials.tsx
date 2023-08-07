@@ -21,37 +21,39 @@ export const TestimonialsSection = () => {
 
     0: {
       slidesPerView: 1,
-      spaceBetween: 0
+      spaceBetween: 30
     },
     1024: {
       slidesPerView: 2,
-      spaceBetween: 0
+      spaceBetween: 30
     }
   }
 
   return (
-    <Container className="mt-15 lg:mt-21.5 space-y-10 lg:space-y-21.5">
-      <HeaderSection
-        title="Testimonials"
-        description="Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about Our Digital Marketing Services"
-      />
-      <div className=" bg-dark rounded-11.5 pt-7.5 lg:pt-21 pb-15 lg:pb-17 px-7.5 lg:px-0">
-        <Swiper
-          grabCursor={true}
-          breakpoints={breakpoints}
-          centeredSlides={true}
-          pagination={{ el: '.swiper-pagination', clickable: true }}
-          modules={[Pagination]}>
-          {testimonials.map((item, index) => (
-            <SwiperSlide key={index}>
-              <TestimonialCard {...item} />
-            </SwiperSlide>
-          ))}
-          <div className="slider-controler pt-15 lg:pt-18">
-            <div className="swiper-pagination"></div>
-          </div>
-        </Swiper>
-      </div>
-    </Container>
+    <section id="testimonials">
+      <Container className="mt-15 lg:mt-21.5 space-y-10 lg:space-y-21.5">
+        <HeaderSection
+          title="Testimonials"
+          description="Hear from Our Satisfied Clients: Read Our Testimonials to Learn More about Our Digital Marketing Services"
+        />
+        <div className=" bg-dark rounded-11.5 pt-7.5 lg:pt-21 pb-15 lg:pb-17 px-7.5 lg:px-0">
+          <Swiper
+            grabCursor={true}
+            breakpoints={breakpoints}
+            centeredSlides={true}
+            pagination={{ el: '.swiper-pagination', clickable: true }}
+            modules={[Pagination]}>
+            {testimonials.map((item, index) => (
+              <SwiperSlide key={index}>
+                <TestimonialCard {...item} />
+              </SwiperSlide>
+            ))}
+            <div className="slider-controler pt-15 lg:pt-18">
+              <div className="swiper-pagination"></div>
+            </div>
+          </Swiper>
+        </div>
+      </Container>
+    </section>
   )
 }

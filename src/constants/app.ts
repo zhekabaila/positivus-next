@@ -5,24 +5,24 @@ interface NavMenuType {
 
 export const navManu: NavMenuType[] = [
   {
-    title: 'About us',
-    link: '/#about-us'
-  },
-  {
     title: 'Services',
     link: '/#services'
+  },
+  {
+    title: 'Our Working',
+    link: '/#our-working'
   },
   {
     title: 'Use Cases',
     link: '/#use-cases'
   },
   {
-    title: 'Pricing',
-    link: '/#pricing'
+    title: 'Team',
+    link: '/#team'
   },
   {
-    title: 'Blog',
-    link: '/#blog'
+    title: 'Testimonials',
+    link: '/#testimonials'
   }
 ]
 
@@ -215,5 +215,33 @@ export const testimonials: TestimonialsType[] = [
       'We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence.',
     name: 'John Smith',
     profession: 'Marketing Director at XYZ Corp'
+  }
+]
+
+interface CaseStudiesType {
+  link: string
+  text: string
+}
+
+export const caseStudies: CaseStudiesType[] = [
+  {
+    link: '/',
+    text: 'For a local restaurant, we implemented a targeted PPC campaign that resulted in a 50% increase in website traffic and a 25% increase in sales.'
+  },
+  {
+    link: '/',
+    text: 'For a local restaurant, we implemented a targeted PPC campaign that resulted in a 50% increase in website traffic and a 25% increase in sales.'
+  },
+  {
+    link: '/',
+    text: 'For a local restaurant, we implemented a targeted PPC campaign that resulted in a 50% increase in website traffic and a 25% increase in sales.'
+  },
+  {
+    link: '/',
+    text: 'For a local restaurant, we implemented a targeted PPC campaign that resulted in a 50% increase in website traffic and a 25% increase in sales.'
+  },
+  {
+    link: '/',
+    text: 'For a local restaurant, we implemented a targeted PPC campaign that resulted in a 50% increase in website traffic and a 25% increase in sales.'
   }
 ]

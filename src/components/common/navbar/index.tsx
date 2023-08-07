@@ -1,14 +1,15 @@
 'use client'
 
 import React, { useState } from 'react'
-import Container from '@/components/layout/container'
 import Link from 'next/link'
+
+import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
+import Container from '@/components/layout/container'
+import { Menu, Transition } from '@headlessui/react'
 import Button from '@/components/ui/button'
+import Title from '@/components/ui/title'
 import { navManu } from '@/constants/app'
 import Logo from '@/components/ui/logo'
-import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai'
-import Title from '@/components/ui/title'
-import { cn } from '@/lib/utils'
 
 const Navbar = () => {
   const [isShow, setShow] = useState<boolean>(false)
@@ -27,35 +28,51 @@ const Navbar = () => {
           <ul className="hidden lg:flex items-center gap-x-10">
             {navManu.map((item, index) => (
               <li key={index}>
-                <Link href={item.link} className="text-xl font-normal">
+                <a href={item.link} className="text-xl font-normal">
                   {item.title}
-                </Link>
+                </a>
               </li>
             ))}
             <li>
-              <Button text="Request a quote" variant="outline" rounded="xl" className="py-2.5 px-5 text-black" />
+              <a
+                href="/#contact-us"
+                className="text-black px-5 py-2.5 border-1 border-black border-solid bg-transparent rounded-xl">
+                Contact us
+              </a>
             </li>
           </ul>
         </nav>
       </Container>
-      <Container className="absolute bg-white w-full py-4">
-        <ul className={cn('flex-col w-full', isShow ? 'flex' : 'hidden')}>
-          {navManu.map((item, index) => (
-            <li key={index} className="flex justify-end w-full p-5">
-              <Link href={item.link} className="text-xl font-normal" onClick={() => setShow(false)}>
-                {item.title}
-              </Link>
-            </li>
-          ))}
-          <Button
-            text="Request a quote"
-            variant="outline"
-            rounded="xl"
-            className="py-2.5 px-5 text-black"
-            onClick={() => setShow(false)}
-          />
-        </ul>
-      </Container>
+      <Transition
+        show={isShow}
+        enter="transition-all duration-500"
+        enterFrom="max-h-0"
+        enterTo="max-h-screen"
+        leave="transition-all duration-500"
+        leaveFrom="max-h-screen"
+        leaveTo="max-h-0"
+        className=" absolute bg-white w-full lg:hidden overflow-y-hidden">
+        <Menu>
+          <Container className="py-4">
+            <ul className="flex flex-col w-full">
+              {navManu.map((item, index: number) => (
+                <li key={index} className="flex justify-end w-full p-5">
+                  <Link href={item.link} className="text-xl font-normal" onClick={() => setShow(false)}>
+                    {item.title}
+                  </Link>
+                </li>
+              ))}
+              <Button
+                text="Request a quote"
+                variant="outline"
+                rounded="xl"
+                className="py-2.5 px-5 text-black"
+                onClick={() => setShow(false)}
+              />
+            </ul>
+          </Container>
+        </Menu>
+      </Transition>
     </header>
   )
 }

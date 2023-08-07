@@ -21,7 +21,7 @@ const Footer = () => {
           <ul className="flex flex-col lg:flex-row items-center gap-y-15px lg:gap-x-10">
             {navManu.map((item, index) => (
               <li key={index} className="text-base lg:text-lg font-normal text-white lg:underline">
-                <Link href={item.link}>{item.title}</Link>
+                <a href={item.link}>{item.title}</a>
               </li>
             ))}
           </ul>
